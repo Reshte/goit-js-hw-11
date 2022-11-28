@@ -7,6 +7,7 @@ const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '19287883-8248a4cfa378b2f4de664e52e';
 let searchQuery;
 let page = 1;
+
 const simpleLightbox = new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
   captionDelay: 250,
