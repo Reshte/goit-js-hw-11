@@ -111,7 +111,7 @@ function createMarkup(arr) {
 async function loadMore() {
   page += 1;
   refs.loadMoreBtn.classList.add('hidden');
-  const cards = await requestApi1(page, searchQuery);
+  const cards = await requestApi(page, searchQuery);
   try {
     if (cards.data.totalHits >= page) {
       refs.gallary.insertAdjacentHTML(
