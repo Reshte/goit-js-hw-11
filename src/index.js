@@ -49,6 +49,7 @@ async function onSearch(event) {
       refs.loadMoreBtn.classList.remove('hidden');
       simpleLightbox.refresh();
     } else {
+      refs.loadMoreBtn.classList.add('hidden');
       Notiflix.Notify.warning(
         'Sorry, there are no images matching your search query. Please try again.'
       );
@@ -120,7 +121,7 @@ async function loadMore() {
       refs.loadMoreBtn.classList.remove('hidden');
       simpleLightbox.refresh();
     } else {
-      refs.loadMoreBtn.classList.remove('hidden');
+      refs.loadMoreBtn.classList.add('hidden');
       Notiflix.Notify.warning(
         "We're sorry, but you've reached the end of search results."
       );
