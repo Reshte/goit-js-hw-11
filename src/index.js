@@ -36,7 +36,7 @@ async function onSearch(event) {
     return;
   }
 
-  const cards = await requestApi1(page, searchQuery);
+  const cards = await requestApi(page, searchQuery);
   try {
     if (cards.data.hits.length > 0) {
       Notiflix.Notify.success(
@@ -59,7 +59,7 @@ async function onSearch(event) {
   }
 }
 
-async function requestApi1(page = 1, searchQuery) {
+async function requestApi(page = 1, searchQuery) {
   const options = {
     params: {
       key: `${API_KEY}`,
